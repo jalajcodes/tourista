@@ -6,7 +6,6 @@
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 	transition: transform 0.2s;
-	transform: skewY(7deg);
 
 	&:not(:last-child) {
 		margin-right: 6rem;
@@ -22,6 +21,6 @@
 	}
 
 	&:hover {
-		transform: skewY(7deg) translateY(-1.5rem) scale(1.03);
+		transform: translateY(-1.5rem) scale(1.03);
 	}
 }

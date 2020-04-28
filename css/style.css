@@ -193,8 +193,7 @@ body {
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s;
-  transform: skewY(7deg); }
+  transition: transform 0.2s; }
   .feature-box:not(:last-child) {
     margin-right: 6rem; }
   .feature-box__icon {
@@ -206,17 +205,45 @@ body {
     background-clip: text;
     color: transparent; }
   .feature-box:hover {
-    transform: skewY(7deg) translateY(-1.5rem) scale(1.03); }
+    transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
   perspective: 150rem;
-  -moz-perspective: 150rem; }
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
   .card__side {
-    background-color: orangered;
     height: 50rem;
-    transition: all 0.8s; }
-  .card:hover .card__side {
-    transform: rotateY(180deg); }
+    color: #fff;
+    font-size: 3rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      background-color: green;
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7738); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: url(../img/nat-5.jpg), linear-gradient(to right bottom, #ffb900, #ff7738); }
 
 .header {
   height: 95vh;
@@ -289,6 +316,8 @@ body {
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
 
 .section-tours {
   background-color: #f7f7f7;
