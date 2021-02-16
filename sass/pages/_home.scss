@@ -1,49 +1,50 @@
 .section-about {
-	background-color: $color-grey-light-1;
-	padding: 25rem 0;
-	margin-top: -20vh;
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
 
-	.flex {
-		.col-1-of-2:not(:last-child) {
-			margin-right: 6rem;
-		}
-	}
+    .flex {
+        .col-1-of-2:not(:last-child) {
+            margin-right: 6rem;
+        }
+    }
 }
 
 .flex {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15rem;
 }
 
 .flex > * {
-	flex: 1;
+    flex: 1;
 }
 
 .flex-align {
-	align-self: flex-start;
+    align-self: flex-start;
 }
 
 .section-features {
-	padding: 20rem 0;
-	background-image: linear-gradient(to right bottom, #55c57ac0, #28b485c0), url('../img/nat-4.jpg');
-	background-size: cover;
-	transform: skewY(-7deg);
-	margin-top: -10rem;
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, #55c57ac0, #28b485c0),
+        url('../img/nat-4.jpg');
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
 
-	& > * {
-		transform: skewY(7deg);
-	}
+    & > * {
+        transform: skewY(7deg);
+    }
 }
 
 .section-tours {
-	background-color: $color-grey-light-1;
-	padding: 25rem 0 15rem 0;
-	margin-top: -10rem;
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10rem;
 }
 
 .section-stories {
-	padding: 15rem 0;
-	background-color: $color-grey-light-1;
+    padding: 15rem 0;
+    background-color: $color-grey-light-1;
 }
